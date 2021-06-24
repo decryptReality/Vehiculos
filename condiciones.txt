@@ -5,11 +5,9 @@ vehiculo
 	catidad de pasajeros
 	velocidad maxima
 	aceleracion: double
-
 	girar: interfaz
 		derecha
 		izquierda
-	
 	tipos
 		carga
 			transportar material: interfaz
@@ -17,8 +15,6 @@ vehiculo
 			turbo (3 * aceleracion): interfaz
 		camioneta
 			transportar personas: interfaz
-
-
 array
 	20 vehiculos
 metodo
