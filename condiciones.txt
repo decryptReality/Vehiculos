@@ -2,7 +2,7 @@
 vehiculo
 	combustible: diesel o gasolina
 	cantidad galones
-	catidad de pasajeros
+	cantidad de pasajeros
 	velocidad maxima
 	aceleracion: double
 	girar: interfaz
