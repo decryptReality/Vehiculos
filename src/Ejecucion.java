@@ -87,11 +87,11 @@ public class Ejecucion
         }
         if(res == 2)
         {
-            vehiculo.girarDerecha();
+            vehiculo.girarIzquierda();
         }
         if(res == 3)
         {
-            vehiculo.girarIzquierda();
+            vehiculo.girarDerecha();
         }
     }
 
@@ -126,7 +126,7 @@ public class Ejecucion
     {
         for(int i = 0; i < vehiculos.length; i = i + 1)
         {
-            System.out.print("[" + i + "]");
+            System.out.print("[" + i + "] ");
             verificarTipo(vehiculos[i]);
         }
     }
@@ -135,15 +135,15 @@ public class Ejecucion
     {
         if(vehiculo instanceof Camioneta)
         {
-            System.out.println("  tipo: camioneta");
+            System.out.println("tipo: CAMIONETA");
         }
         if(vehiculo instanceof Carga)
         {
-            System.out.println("  tipo: de carga");
+            System.out.println("tipo: DE CARGA");
         }
         if(vehiculo instanceof Carrera)
         {
-            System.out.println("  tipo: carrera");
+            System.out.println("tipo: CARRERA");
         }
         vehiculo.getInformacion();
     }
