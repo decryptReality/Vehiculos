@@ -1,5 +1,6 @@
 package interfaces;
+
 public interface TransportarPersonas 
 {
-    void trasportarPersonas(int personas);
+    void trasportarPersonas(int personas, int metros);
 }

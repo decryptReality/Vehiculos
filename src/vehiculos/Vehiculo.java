@@ -1,11 +1,23 @@
 package vehiculos;
 
 import interfaces.*;
-
-public class Vehiculo implements Girar 
+ 
+public abstract class Vehiculo implements Girar
 {
-    boolean esDiesel;
-    double galones;
-    int pasajeros;
-    double aceleracion;
+    protected boolean esDiesel;
+    protected double galones;
+    protected int pasajeros;
+    protected double aceleracion;
+
+    @Override
+    public void girarIzquierda() 
+    {
+        System.out.println("  [?] Se giro a la izquierda");
+    }
+
+    @Override
+    public void girarDerecha() 
+    {
+        System.out.println("  [?] Se giro a la derecha");
+    }
 }
