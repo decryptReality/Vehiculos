@@ -5,6 +5,11 @@ import interfaces.*;
 
 public class Carrera extends Vehiculo implements Turbo
 {
+    public Carrera(boolean esDiesel, double galones, int pasajeros, double aceleracion) 
+    {
+        super(esDiesel, galones, pasajeros, aceleracion);
+    }
+
     @Override
     public void activarTurbo() 
     {

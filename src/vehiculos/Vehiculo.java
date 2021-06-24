@@ -9,6 +9,20 @@ public abstract class Vehiculo implements Girar
     protected int pasajeros;
     protected double aceleracion;
 
+    public Vehiculo(boolean esDiesel, double galones, int pasajeros, double aceleracion) 
+    {
+        this.esDiesel = esDiesel;
+        this.galones = galones;
+        this.pasajeros = pasajeros;
+        this.aceleracion = aceleracion;
+    }
+
+    public void getInformacion()
+    {
+        System.err.println("  esDisel: " + esDiesel + ", " + galones + " gal, aceleracion: " + aceleracion + ", pasajeros: " + pasajeros);
+    }
+
+
     @Override
     public void girarIzquierda() 
     {
