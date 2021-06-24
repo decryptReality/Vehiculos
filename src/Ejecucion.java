@@ -10,11 +10,90 @@ public class Ejecucion
     public static void main(String[] args) 
     {
         ingresarVehiculos();
-        mostrarVehiculos();
+        menu();
     }
     static Scanner scanner = new Scanner(System.in);
     static Random random = new Random();
     static Vehiculo[] vehiculos = new Vehiculo[20];
+
+    static void menu()
+    {
+        boolean salir = false;
+        while(!salir)
+        {
+            System.out.println("\nV E H I C U L O S");
+            System.out.println("Para salir ingrese -1");
+            System.out.println("[1] Mostrar vehiculos");
+            System.out.println("[2] Interactuar con carros");
+            int res = scanner.nextInt();
+            salir = res == -1;
+            if(!salir)
+            {
+                if(res == 1)
+                {
+                    mostrarVehiculos();
+                }
+                if(res == 2)
+                {
+                    System.out.println("Ingrese el indice de algun vehiculo");
+                    int i = scanner.nextInt();
+                    interactuar(vehiculos[i]);
+                }
+            }
+        }
+    }
+
+    static void interactuar(Vehiculo vehiculo)
+    {
+        if(vehiculo instanceof Camioneta)
+        {
+            System.out.println("[1] Transportar personas");
+        }
+        if(vehiculo instanceof Carga)
+        {
+            System.out.println("[1] Transportar material");
+        }
+        if(vehiculo instanceof Carrera)
+        {
+            System.out.println("[1] Activar turbo");
+        }
+        System.out.println("[2] Mover a la izquierda");
+        System.out.println("[3] Mover a la derecha");
+        int res = scanner.nextInt();
+        if(res == 1)
+        {
+            if (vehiculo instanceof Camioneta) 
+            {
+                System.out.print("Ingrese cantidad de personas: ");
+                int personas = scanner.nextInt();
+                System.out.print("Ingrese la distancia en metros: ");
+                int metros = scanner.nextInt();
+                ((Camioneta) vehiculo).trasportarPersonas(personas, metros);;
+            }
+            if (vehiculo instanceof Carga) 
+            {
+                System.out.print("Ingrese el nombre del material: ");
+                String material = scanner.next();
+                System.out.print("Ingrese cantidad en kilogramos: ");
+                int kilogramos = scanner.nextInt();
+                System.out.print("Ingrese la distancia en metros: ");
+                int metros = scanner.nextInt();
+                ((Carga) vehiculo).transportarMaterial(material, kilogramos, metros);
+            }
+            if (vehiculo instanceof Carrera) 
+            {
+                ((Carrera) vehiculo).activarTurbo();
+            }
+        }
+        if(res == 2)
+        {
+            vehiculo.girarDerecha();
+        }
+        if(res == 3)
+        {
+            vehiculo.girarIzquierda();
+        }
+    }
 
     static void ingresarVehiculos()
     {
@@ -47,6 +126,7 @@ public class Ejecucion
     {
         for(int i = 0; i < vehiculos.length; i = i + 1)
         {
+            System.out.print("[" + i + "]");
             verificarTipo(vehiculos[i]);
         }
     }

@@ -19,7 +19,7 @@ public abstract class Vehiculo implements Girar
 
     public void getInformacion()
     {
-        System.err.println("  esDisel: " + esDiesel + ", " + galones + " gal, aceleracion: " + aceleracion + ", pasajeros: " + pasajeros);
+        System.out.println("  esDisel: " + esDiesel + ", " + galones + " gal, aceleracion: " + aceleracion + ", pasajeros: " + pasajeros);
     }
 
 
