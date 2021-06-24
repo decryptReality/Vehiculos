@@ -1,0 +1,32 @@
+
+vehiculo
+	combustible: diesel o gasolina
+	cantidad galones
+	catidad de pasajeros
+	velocidad maxima
+	aceleracion: double
+
+	girar: interfaz
+		derecha
+		izquierda
+	
+	tipos
+		carga
+			transportar material: interfaz
+		carrera
+			turbo (3 * aceleracion): interfaz
+		camioneta
+			transportar personas: interfaz
+
+
+array
+	20 vehiculos
+metodo
+	parametros
+		objeto vehiculo
+	definir tipo de vehiculo
+	
+
+
+
+
